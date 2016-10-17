@@ -3,13 +3,95 @@
   <head>
     <meta charset="utf-8">
     <title>CSS</title>
-    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="stylesheet" href="./a.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    function changeProgressBar(percent) {
+      document.getElementById('prog-bar').style.width = percent + "%";
+      document.getElementById('prog-val').innerText = percent + "%";
+    }
+    </script>
   </head>
   <body>
-    <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Left</button>
-      <button type="button" class="btn btn-default">Middle</button>
-      <button type="button" class="btn btn-default">Right</button>
+    <div class="main">
+      <div class="element">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">Left</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Middle</button>
+          <button type="button" class="btn btn-default">Right</button>
+        </div>
+      </div>
+
+      <div class="element">
+        <button type="button" class="btn btn-default">default</button>
+        <button type="button" class="btn btn-primary">primary</button>
+        <button type="button" class="btn btn-success">success</button>
+        <button type="button" class="btn btn-info">info</button>
+        <button type="button" class="btn btn-warning">warning</button>
+        <button type="button" class="btn btn-danger">danger</button>
+      </div>
+
+      <div class="element">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">default</button>
+          <button type="button" class="btn btn-primary">primary</button>
+          <button type="button" class="btn btn-success">success</button>
+          <button type="button" class="btn btn-info">infonfo</button>
+          <button type="button" class="btn btn-warning">warning</button>
+          <button type="button" class="btn btn-danger">danger</button>
+        </div>
+      </div>
+
+      <div class="element">
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">a</button>
+            <button type="button" class="btn btn-default">b</button>
+            <button type="button" class="btn btn-default">c</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">test</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">delete</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="element">
+        <ul class="pagination">
+          <li>
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="element" style="width: 60%;">
+        <div class="progress">
+          <div id="prog-bar" class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+            <span id="prog-val">50%</span>
+          </div>
+        </div>
+        <input type="range" id="prog-range" step="0.5" oninput="changeProgressBar(this.value);">
+      </div>
     </div>
   </body>
 </html>
